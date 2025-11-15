@@ -9,7 +9,7 @@ Complete CRUD API for managing products with role-based access control, caching,
 
 ### 📖 PUBLIC ENDPOINTS (No Authentication Required)
 
-#### 1. **Get All Products** (with pagination, filtering, sorting)
+#### 1. **Get All Products** (with pagination)
 ```
 GET /api/v1/products
 ```
@@ -18,7 +18,6 @@ GET /api/v1/products
 - `limit` (integer, default: 10) - Items per page
 - `category` (string) - Filter by category (optional)
 - `available` (boolean) - Filter by availability (optional)
-- `sortBy` (string, default: "-createdAt") - Sort field (e.g., "price", "-price", "-createdAt")
 
 **Example Request:**
 ```bash
@@ -307,10 +306,7 @@ curl -X DELETE "http://localhost:5400/api/v1/products/507f1f77bcf86cd799439012" 
 ✅ **CRUD Operations** - Create, Read (single & multiple), Update, Delete  
 ✅ **Authentication & Authorization** - JWT-based with role checking  
 ✅ **Pagination** - Page and limit support  
-✅ **Filtering** - By category and availability  
-✅ **Sorting** - Flexible sorting by any field  
-✅ **Search** - Full-text search by name and description  
-✅ **Caching** - Redis caching for public endpoints  
+✅ **Caching** - caching for public endpoints  
 ✅ **Rate Limiting** - Protection against abuse  
 ✅ **Error Handling** - Comprehensive error messages  
 ✅ **Input Validation** - Schema validation via Zod (ready for integration)
